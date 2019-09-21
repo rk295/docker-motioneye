@@ -13,9 +13,6 @@ fi
 
 # Fix settings in motion and motioneye
 sed -i '/conf_path.*/c\conf_path /config' /config/motioneye.conf
-sed -i '/log_path.*/c\log_path /home/nobody/motioneye/log' /config/motioneye.conf
-sed -i '/run_path.*/c\run_path /home/nobody/motioneye/run' /config/motioneye.conf
-sed -i '/media_path.*/c\media_path /home/nobody/motioneye/media' /config/motioneye.conf
 
 # Set permissions on the config directory
 echo "Fixing permissions"

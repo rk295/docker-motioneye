@@ -26,7 +26,8 @@ RUN apt-get install -q -y --no-install-recommends \
         mosquitto-clients \
         python \
         python-dev \
-        python-pip && \
+        python-pip \
+        v4l-utils && \
         pip install setuptools wheel && \
         apt-get purge -y openssh-client openssh-server openssh-sftp-server && \
         apt-get -y clean && \
