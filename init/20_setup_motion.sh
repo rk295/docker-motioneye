@@ -1,22 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Check if motion is installed
-[ -f "/usr/local/bin/motion" ] && echo "Motion is already installed" || /usr/local/bin/installMotion.sh
-
-# Check for configuration directory
-if [ ! -d /config ]; then
-        mkdir -p /config
-fi
-
-# Check for motion.conf config file
-if [ ! -f /config/motion.conf ]; then
-        cp /usr/local/etc/motion/motion-dist.conf /config/motion.conf
-fi
-
-# Check for the motioneye config file
-if [ ! -f /config/motioneye.conf ]; then
-        cp /usr/local/share/motioneye/extra/motioneye.conf.sample /config/motioneye.conf
-fi
+set -euo pipefail
+IFS=$'\n\t'
 
 if [ ! -d /home/nobody/motioneye/conf ]; then
         mkdir -p /home/nobody/motioneye/{conf,log,run,media}

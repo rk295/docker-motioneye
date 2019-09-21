@@ -1,5 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
+set -euo pipefail
+IFS=$'\n\t'
 
 PUID=${PUID:-99}
 PGID=${PGID:-100}

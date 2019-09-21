@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Run motion
+set -euo pipefail
+IFS=$'\n\t'
+
 exec /sbin/setuser nobody /usr/local/bin/meyectl startserver -c /config/motioneye.conf

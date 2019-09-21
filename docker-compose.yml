@@ -1,0 +1,14 @@
+version: '3'
+services:
+  motioneye:
+    image: motioneye:latest
+    ports:
+      - 8081:8081
+      - 8765:8765
+    environment:
+      TIMEZONE: Europe/London
+      PUID: 99
+      PGID: 100
+    volumes:
+      - ./container/media:/home/nobody/motioneye/media
+      - ./container/config:/config
